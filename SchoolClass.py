@@ -5,9 +5,6 @@ class SchoolClass:
         self._subjects = subjects
         self._workload = workload
 
-    def add_teacher(self, teacher):
-        self.teacher = teacher
-
     @property
     def grade(self):
         return self._grade
@@ -20,8 +17,9 @@ class SchoolClass:
     def subjects(self):
         return self._subjects
 
+    @property
     def workload(self):
-        return workload
+        return self._workload
 
     def __str__(self):
         return str(self.grade) + str(self.label) + " " + str(self.subjects)
